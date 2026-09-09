@@ -5,11 +5,11 @@ class InventoryPage {
         this.cartIcon = page.locator('.shopping_cart_link');
     }
 
-    async addItemToCart(noItems) {
-        await this.page.locator(`[data-test="add-to-cart-${noItems}"]`).click();
+    async addItemToCart(item) {
+        await this.page.locator(`[data-test="add-to-cart-${item}"]`).click();
     }
 
-    async removeItemFromCart(noItems) {
+    async removeItemFromCart(item) {
         await this.page.locator(`[data-test="remove-${item}"]`).click();
     }
 
