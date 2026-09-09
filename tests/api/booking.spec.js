@@ -31,6 +31,8 @@ test.describe.serial('Restful-Booker API', () => {
         const body = await response.json();
         expect(body.bookingid).toBeDefined();
         expect(body.booking.firstname).toBe(bookingData.validBooking.firstname);
+        expect(body.booking.lastname).toBe(bookingData.validBooking.lastname);
+        expect(body.booking.depositpaid).toBe(bookingData.validBooking.depositpaid);  
 
         bookingId = body.bookingid;
     });

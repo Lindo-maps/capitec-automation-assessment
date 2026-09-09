@@ -28,7 +28,7 @@ utils/          - Shared helpers (e.g. API auth token retrieval)
 1. Install Node.js LTS (18+) if you don't have it: https://nodejs.org
 2. Clone this repo and install dependencies:
    ```
-   git clone <repo-url>
+   git clone https://github.com/Lindo-maps/capitec-automation-assessment.git
    cd capitec-automation-assessment
    npm install
    npx playwright install
@@ -67,6 +67,7 @@ This shows a pass/fail breakdown per browser, with step-by-step traces for any f
 ## Test data
 
 Booking payloads for the API tests live in `testdata/bookings.json`, kept separate from the test files themselves so data can be updated without touching test logic.
+UI login test data is in `testdata/users.json`
 
 ## Notes on design decisions
 
