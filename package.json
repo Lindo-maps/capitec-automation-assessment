@@ -1,0 +1,24 @@
+{
+  "name": "capitec-automation-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lindo-maps/capitec-automation-assessment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Lindo-maps/capitec-automation-assessment/issues"
+  },
+  "homepage": "https://github.com/Lindo-maps/capitec-automation-assessment#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.5.0",
+    "eslint": "^10.10.0"
+  }
+}
