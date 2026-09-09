@@ -16,14 +16,19 @@ export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  // Retry twice in CI and once locally
   forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
-  /* Opt out of parallel tests on CI. */
+  retries: process.env.CI ? 2 : 1,
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  reporter: [
+    ['html'],
+    ['monocart-reporter', {
+    name: "Capitec Assessment - Test Report",
+    outputFile: './monocart-report/index.html',
+    }],
+   ],
+/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
@@ -54,6 +59,6 @@ projects: [
     testDir: './tests/api',
   },
 ],
-    
+
 });
 
